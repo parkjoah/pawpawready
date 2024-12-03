@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 const server = http.createServer(app);
 
 // 서버 실행
-const PORT = 3000;
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
+const PORT = 9093; // SSH 포트와 동일하게 설정 가능
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on http://0.0.0.0:${PORT}`);
 });
