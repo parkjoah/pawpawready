@@ -21,6 +21,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// CORS 설정 추가
+app.use(cors());
+
 // 라우트 설정
 app.use('/auth', authRoutes);
 // app.use("/community", communityRoutes);
