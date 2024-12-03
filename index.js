@@ -2,6 +2,7 @@ const http = require('http');
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require("cors");
 const connectDB = require('./config/dbconnect');
 const authRoutes = require('./routes/auth');
 
