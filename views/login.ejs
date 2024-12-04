@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>pawready</title>
+  <title>PAWREADY</title>
   <link rel="stylesheet" href="/login.css">
 </head>
+
 <body>
 
   <form action="/auth/login" method="POST">
     <div id="wrap">
       <div id="loginWr">
-          <a href="#"><img src="/img/logo.png" alt="PAWREADY"></a>   
-          <form class="inputs" id="loginForm">
-              <input type="text" id="username" placeholder=" Username" required><br>
-              <input type="password" id="password" placeholder=" Password"><br>
-              <button type="submit">Log in</button>
-          </form>
-          <div class="forgotPW">
-              <p>Don't have an account? <a href="/register">Register here</a>.</p>
-          </div>
+        <a href="#"><img src="/img/logo.png" alt="PAWREADY"></a>
+        <form class="inputs" id="loginForm">
+          <input type="text" id="username" placeholder=" Username" required><br>
+          <input type="password" id="password" placeholder=" Password"><br>
+          <button type="submit">Log in</button>
+        </form>
+        <div class="forgotPW">
+          <p>Don't have an account? <a href="/auth/register">Register here</a>.</p>
+        </div>
       </div>
-  </div>
-  
+    </div>
+  </form>
 </body>
+
 </html>

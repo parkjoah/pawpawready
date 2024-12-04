@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register</title>
-  <link rel="stylesheet" href="/style.css">
+  <title>PAWREADY</title>
+  <link rel="stylesheet" href="/login.css">
 </head>
+
 <body>
-  <h1>Register</h1>
+
   <form action="/auth/register" method="POST">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
-    <br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
-    <br>
-    <button type="submit">Register</button>
+    <div id="wrap">
+      <div style="padding-top: 25px ;" id="loginWr">
+        <label for="username" style="color: #777;">Username</label><br>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password" style="color: #777;">Password</label><br>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <label for="email"style="color: #777;">email</label><br>
+        <input type="text" id="email" name="email" required>
+        <br>
+        <button type="submit">Register</button>
+        <div class="forgotPW">
+          <p>Already have an account? <a href="/auth/login">Login here</a>.</p>
+        </div>
+      </div>
+    </div>
   </form>
-  <p>Already have an account? <a href="/login">Login here</a>.</p>
+
 </body>
+
 </html>
