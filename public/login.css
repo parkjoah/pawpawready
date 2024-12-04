@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{text-decoration: none; color: inherit;}
+button{cursor: pointer;}
+
+
+
+#wrap {
+    position: relative;
+    margin: auto;
+    display: flex;
+    height: 600px;
+    width: 100%;
+}
+
+#loginWr {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    width: 350px;
+    height: 350px;
+    border: #DBDBDB 2px solid;
+    border-radius: 10px;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px;
+}
+
+input {
+    width: 270px;
+    height: 40px;
+    border-radius: 3px;
+    border: #DBDBDB solid 1px;
+    margin-top: 6px;
+    background-color: #FAFAFA;
+}
+
+.inputs {
+    padding-top: 30px;
+    display: inline-block;
+    border-bottom: #DBDBDB 1px solid;
+    padding-bottom: 20px;
+}
+
+button {
+    width: 270px;
+    height: 33px;
+    border-radius: 8px;
+    background-color: #726969;
+    border: none;
+    color: #fff;
+    margin-top: 14px;
+    margin-bottom:10px ;
+    
+}
+.forgotPW{padding-top: 15px; font-size: 14px; color: #00376B;}

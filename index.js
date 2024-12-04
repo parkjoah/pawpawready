@@ -31,8 +31,9 @@ app.use('/auth', authRoutes);
 
 // 루트 경로 처리
 app.get('/', (req, res) => {
-  res.send('<h1>Welcome to the App</h1><p><a href="/auth/register">Register</a> | <a href="/auth/login">Login</a></p>');
+  res.render('login');
 });
+
 
 // HTTP 서버 생성
 const server = http.createServer(app);
