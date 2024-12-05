@@ -5,6 +5,8 @@ const path = require('path');
 const cors = require("cors");
 const connectDB = require('./config/dbconnect');
 const authRoutes = require('./routes/auth');
+const session = require('express-session');
+const flash = require('connect-flash');
 
 // MongoDB 연결
 connectDB();
@@ -21,6 +23,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 // 미들웨어 설정
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(flash()); //플래시
+app.use(session({ //세션
+  secret: 'your-secret-key',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }  
+}));
 
 // CORS 설정 추가
 app.use(cors());
@@ -29,7 +38,7 @@ app.use(cors());
 app.use('/auth', authRoutes);
 // app.use("/community", communityRoutes);
 
-// 루트 경로 처리
+// 기본 경로
 app.get('/', (req, res) => {
   res.render('login');
 });
