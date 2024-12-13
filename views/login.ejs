@@ -11,21 +11,22 @@
 
 <body>
 
-  <form action="/auth/login" method="POST">
-    <div id="wrap">
-      <div id="loginWr">
-        <a href="#"><img src="/img/logo.png" alt="PAWREADY"></a>
-        <form class="inputs" id="loginForm">
-          <input type="text" id="username" placeholder=" Username" required><br>
-          <input type="password" id="password" placeholder=" Password"><br>
-          <button type="submit">Log in</button>
-        </form>
-        <div class="forgotPW">
-          <p>Don't have an account? <a href="/auth/register">Register here</a>.</p>
-        </div>
+
+  <div id="wrap">
+    <div id="loginWr">
+      <a href="#"><img src="/img/logo.png" alt="PAWREADY"></a>
+      <form class="inputs" action="/login" method="POST" id="loginForm">
+        <input type="text" name="username" id="username" placeholder=" Username" required><br>
+        <input type="password" name="password" id="password" placeholder=" Password" required><br>
+        <button type="submit">Log in</button>
+      </form>
+      <div class="forgotPW">
+        <p>Don't have an account? <a href="/auth/register">Register here</a>.</p>
       </div>
     </div>
-  </form>
+  </div>
+
+
 </body>
 
 </html>

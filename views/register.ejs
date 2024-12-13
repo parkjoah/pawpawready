@@ -12,14 +12,17 @@
 
   <form action="/auth/register" method="POST">
     <div id="wrap">
-      <div style="padding-top: 25px ;" id="loginWr">
+      <div style="padding-top: 25px ; height: 430px;" id="loginWr">
         <label for="username" style="color: #777;">Username</label><br>
         <input type="text" id="username" name="username" required>
         <br>
         <label for="password" style="color: #777;">Password</label><br>
         <input type="password" id="password" name="password" required>
         <br>
-        <label for="email"style="color: #777;">email</label><br>
+        <label for="password2" style="color: #777;">Confirm Password</label><br>
+        <input type="password" id="password2" name="password2" required>
+        <br>
+        <label for="email"style="color: #777;">Email</label><br>
         <input type="text" id="email" name="email" required>
         <br>
         <button type="submit">Register</button>

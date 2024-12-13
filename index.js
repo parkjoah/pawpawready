@@ -5,6 +5,7 @@ const path = require('path');
 const cors = require("cors");
 const connectDB = require('./config/dbconnect');
 const authRoutes = require('./routes/auth');
+const loginRoutes = require('./routes/loginRoutes')
 const session = require('express-session');
 const flash = require('connect-flash');
 
@@ -38,9 +39,12 @@ app.use(cors());
 app.use('/auth', authRoutes);
 // app.use("/community", communityRoutes);
 
+app.use('/login',loginRoutes);
+
+
 // 기본 경로
 app.get('/', (req, res) => {
-  res.render('login');
+  res.redirect('/login')
 });
 
 
